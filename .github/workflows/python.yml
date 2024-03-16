@@ -1,0 +1,30 @@
+name: Move Changed Files
+
+on:
+  push:
+    branches:
+      - main  # Change this to your branch name if different
+
+jobs:
+  move_files_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Get list of changed files
+        id: changed-files
+        run: echo "::set-env name=CHANGED_FILES::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})"
+
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'  # Change to the Python version you are using
+
+      - name: Execute Python script
+        run: |
+          pip install -r requirements.txt  # If you have any requirements
+          python script.py  # Replace with your Python script file name
+        env:
+          CHANGED_FILES: ${{ steps.changed-files.outputs.CHANGED_FILES }}
