@@ -16,7 +16,7 @@ jobs:
       - name: Get list of changed files
         id: changed-files
         run: |
-          echo "CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})" >> $GITHUB_ENV
+           echo "CHANGED_FILES=$(git diff --name-only HEAD^..HEAD)" >> $GITHUB_ENV
 
       - name: Install Python
         uses: actions/setup-python@v2
