@@ -20,7 +20,7 @@ jobs:
       - name: Install Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'  # Change to the Python version you are using
+          python-version: '3.12.2'  # Change to the Python version you are using
 
       - name: Execute Python script
         run: |
