@@ -10,7 +10,7 @@ def move_files(source_dir, destination_dir, changed_files):
 
 if __name__ == "__main__":
     source_dir = "specs"
-    destination_dir = "new_directory"
+    destination_dir = "specs2"
 
     # Fetch list of changed files from environment variable
     changed_files_str = os.getenv('CHANGED_FILES')
