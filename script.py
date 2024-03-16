@@ -9,8 +9,9 @@ def move_files(source_dir, destination_dir, changed_files):
         shutil.copyfile(source_path, destination_path)
 
 if __name__ == "__main__":
-      source_dir = os.path.join(os.getcwd(), "specs")  # Path relative to repository root
-    destination_dir = os.path.join(os.getcwd(), "specs2")
+    # Set source and destination directories
+    source_dir = os.path.join(os.getcwd(), "specs")  # Path relative to repository root
+    destination_dir = os.path.join(os.getcwd(), "specs2")  # Path relative to repository root
 
     # Fetch list of changed files from environment variable
     changed_files_str = os.getenv('CHANGED_FILES')
