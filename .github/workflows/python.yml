@@ -15,7 +15,8 @@ jobs:
 
       - name: Get list of changed files
         id: changed-files
-        run: echo "::set-env name=CHANGED_FILES::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})"
+        run: |
+          echo "CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})" >> $GITHUB_ENV
 
       - name: Install Python
         uses: actions/setup-python@v2
@@ -25,6 +26,4 @@ jobs:
       - name: Execute Python script
         run: |
           pip install -r requirements.txt  # If you have any requirements
-          python script.py  # Replace with your Python script file name
-        env:
-          CHANGED_FILES: ${{ steps.changed-files.outputs.CHANGED_FILES }}
+          python script.py
