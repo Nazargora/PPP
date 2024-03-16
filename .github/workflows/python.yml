@@ -11,13 +11,15 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Get list of changed files
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+        
+      # Using tj-actions/changed-files@v42 to get changed files
+      - name: Get changed files
         id: changed-files
-        run: |
-           echo "CHANGED_FILES=$(git diff --name-only HEAD^..HEAD)" >> $GITHUB_ENV
-
+        uses: tj-actions/changed-files@v42
+        
       - name: Install Python
         uses: actions/setup-python@v2
         with:
@@ -26,3 +28,5 @@ jobs:
       - name: Execute Python script
         run: |
           python script.py
+        env:
+          CHANGED_FILES: ${{ steps.changed-files.outputs.CHANGED_FILES }}
