@@ -15,7 +15,7 @@
                 "type": "radio",
                 "optionsLvl3": [
                     {
-                        "label": "The investor classifies as a credit institution",
+                        "label": "The invekzscbjstor classifies as a credit institution",
                         "value": "ans_Authorized_CreditInstitution"
                     },
                     {
