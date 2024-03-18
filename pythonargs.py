@@ -24,9 +24,12 @@ def create_flow_spec(files_to_copy):
     if not os.path.exists("specs2"):
         os.makedirs("specs2")
     
+    specs_dir = "specs"
+    specs2_dir = "specs2"
+    
     for file_name in files_to_copy:
-        src = os.path.join("specs", file_name)
-        dest = os.path.join("specs2", file_name)
+        src = os.path.join(specs_dir, file_name)
+        dest = os.path.join(specs2_dir, file_name)
         
         # Check if the file already exists in specs2
         if not os.path.exists(dest):
@@ -41,4 +44,5 @@ if __name__ == "__main__":
     args = arg_parser.parse_args()
     changed_files = args.changed_files
     install_flows(changed_files)
+
 
