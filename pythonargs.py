@@ -6,7 +6,16 @@ def install_flows(changed_files):
     print("Installing Flows")
     
     if changed_files:
-        spec_files = [file for file in os.listdir("specs") if file.endswith(".json")]
+        # Get the GitHub workspace directory
+        github_workspace = os.getenv('GITHUB_WORKSPACE')
+        
+        specs_dir = os.path.join(github_workspace, "specs")
+        
+        if not os.path.exists(specs_dir):
+            print(f"'specs' directory not found in {github_workspace}.")
+            return
+        
+        spec_files = [file for file in os.listdir(specs_dir) if file.endswith(".json")]
         
         # Adjust the path to consider only the file name
         changed_files = [os.path.basename(file) for file in changed_files]
@@ -16,21 +25,15 @@ def install_flows(changed_files):
         if not files_to_copy:
             print("No matching files found in 'specs' directory. Skipping installation.")
         else:
-            create_flow_spec(files_to_copy)
+            create_flow_spec(files_to_copy, specs_dir)
     else:
         print("No changed files provided. Skipping installation.")
 
-def create_flow_spec(files_to_copy):
+def create_flow_spec(files_to_copy, specs_dir):
     # Get the GitHub workspace directory
     github_workspace = os.getenv('GITHUB_WORKSPACE')
     
-    # Set the paths relative to the GitHub workspace
-    specs_dir = os.path.join(github_workspace, "specs")
     specs2_dir = os.path.join(github_workspace, "specs2")
-    
-    if not os.path.exists(specs_dir):
-        print(f"'specs' directory not found in {github_workspace}.")
-        return
     
     if not os.path.exists(specs2_dir):
         os.makedirs(specs2_dir)
