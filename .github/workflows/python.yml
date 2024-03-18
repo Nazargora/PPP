@@ -27,6 +27,4 @@ jobs:
 
       - name: Execute Python script
         run: |
-          python script.py
-        env:
-          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+          python3 your_script.py --changed_files ${{ steps.changed-files.outputs.all_changed_files }}
