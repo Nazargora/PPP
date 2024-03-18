@@ -27,4 +27,4 @@ jobs:
 
       - name: Execute Python script
         run: |
-          python3 your_script.py --changed_files ${{ steps.changed-files.outputs.all_changed_files }}
+          python3 pythonargs.py --changed_files ${{ steps.changed-files.outputs.all_changed_files }}
