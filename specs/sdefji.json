@@ -1,0 +1,290 @@
+[
+    {
+        "answerIDLvl1": "InstitutionalInvestor",
+        "label": "The Investor is an institutionhjibvbhhbuhjjahbil investor or a large, regulated or public entity that is regularly/typically active on the financial market. ",
+        "answerOptions": []
+    },
+    {
+        "answerIDLvl1": "FamisclyOffice",
+        "label": "The Inggvestorsdijc is a large Family Office or a similar lajjrge investment vehicle.",
+        "answerOptions": [
+            {
+                "answerIDLvl2": "Authorjhiized",
+                "label": "The Investor is authorized/regulsfsated orhusj under supervision to operate in the financial markets.",
+                "entity": true,
+                "type": "radio",
+                "optionsLvl3": [
+                    {
+                        "label": "The invekzscbjstor classifies as a credit institution",
+                        "value": "ans_Authorized_CreditInstitution"
+                    },
+                    {
+                        "label": "The investor classifies as an investment firm",
+                        "value": "ans_Authorized_InvestmentFirm"
+                    },
+                    {
+                        "label": "The investor classifies as another authorised or regulated financial institution",
+                        "value": "ans_Authorized_FinancialInstitute"
+                    },
+                    {
+                        "label": "The investor classifies as an insurance company",
+                        "value": "ans_Authorized_InsuranceCompany"
+                    },
+                    {
+                        "label": "The investor classifies as a collective investment scheme or management company of such scheme ",
+                        "value": "ans_Authorized_InvestementScheme"
+                    },
+                    {
+                        "label": "The investor classifies as a pension fund, or the management company of a pension fund",
+                        "value": "ans_Authorized_PensionScheme"
+                    },
+                    {
+                        "label": "The investor classifies as a commodity or commodity derivatives dealer",
+                        "value": "ans_Authorized_Commodity"
+                    },
+                    {
+                        "label": "The investor classifies as a local",
+                        "value": "ans_Authorized_Local"
+                    },
+                    {
+                        "label": "The investor classifies as another institutional investor",
+                        "value": "ans_Authorized_OtherInstitutional"
+                    }
+                ]
+            },
+            {
+                "answerIDLvl2": "PublicBody",
+                "label": "The Investor is a national and regional government, a public body that manages public debt at national or regional level, a Central Bank, an international and supranational institution such as the World Bank, the IMF, the ECB, the EIB and other similar international organisation.",
+                "entity": true
+            },
+            {
+                "answerIDLvl2": "LargeUndertaking",
+                "label": "The Investor is a large undertaking which meets (at least) two of the following requirements on a company basis:",
+                "entity": true,
+                "type": "checkbox",
+                "minAnswers": "2",
+                "optionsLvl3": [
+                    {
+                        "label": "Balance sheet total: EUR 20,000,000",
+                        "value": "ans_LargeUndertaking_BalanceSheetMoreThan20M"
+                    },
+                    {
+                        "label": "Net turnover: EUR 40,000,000",
+                        "value": "ans_LargeUndertaking_NetTurnoverMoreThan20M"
+                    },
+                    {
+                        "label": "Own funds: EUR 2,000,000",
+                        "value": "ans_LargeUndertaking_OwnFunds2M"
+                    }
+                ]
+            },
+            {
+                "answerIDLvl2": "FinancingTransactions",
+                "label": "The Investor is another institutional investor whose main activity is to invest in financial instruments or an entity engaged in the securitisation of assets and other financing transactions.",
+                "entity": true
+            },
+            {
+                "answerIDLvl2": "OtherInstitutional",
+                "label": "OtherInstitutional",
+                "entity": true
+            }
+        ]
+    },
+    {
+        "answerIDLvl1": "FundRepresentativeEntity",
+        "label": "FundRepresentativeEntity",
+        "answerOptions": [
+            {
+                "answerIDLvl2": "LargeUndertaking",
+                "label": "The Investor is a large undertaking which meets (at least) two of the following requirements on a company basis:",
+                "entity": true,
+                "type": "checkbox",
+                "minAnswers": "2",
+                "optionsLvl3": [
+                    {
+                        "label": "Balance sheet total: EUR 20,000,000",
+                        "value": "ans_LargeUndertaking_BalanceSheetMoreThan20M"
+                    },
+                    {
+                        "label": "Net turnover: EUR 40,000,000",
+                        "value": "ans_LargeUndertaking_NetTurnoverMoreThan20M"
+                    },
+                    {
+                        "label": "Own funds: EUR 2,000,000",
+                        "value": "ans_LargeUndertaking_OwnFunds2M"
+                    }
+                ]
+            },
+            {
+                "answerIDLvl2": "ProfessionalInvestor",
+                "label": "The Investor meets (at least) two of the following requirements and wishes to be treated as a professional investor  in relation to its participation in the Fund (please tick as applicable):",
+                "entity": true,
+                "type": "checkbox",
+                "minAnswers": "2",
+                "optionsLvl3": [
+                    {
+                        "label": "The size of the Investor's financial instrument portfolio, defined as including cash deposits and financial instruments, exceeds EUR 500,000.",
+                        "value": "ans_ProfessionalInvestor_MoreThan500"
+                    },
+                    {
+                        "label": "The investor, or a person authorised to transact business in the Investor's name, has worked in the financial sector for at least one year in a professional position, which requires knowledge of the transactions or services envisaged.",
+                        "value": "ans_ProfessionalInvestor_AtLeast1Year"
+                    },
+                    {
+                        "label": "The Investor, or a person authorised to transact business in the Investor's name, has carried out transactions, in significant size, on the relevant market at an average frequency of 10 per quarter over the previous four quarters.",
+                        "value": "ans_ProfessionalInvestor_MoreThan10Quarterly"
+                    }
+                ]
+            },
+            {
+                "answerIDLvl2": "Morethan200k",
+                "label": "The Investor subscribes for a Capital Commitment of at least EUR 200,000.",
+                "entity": true
+            }
+        ]
+    },
+    {
+        "answerIDLvl1": "FundRepresentativeIndividual",
+        "label": "FundRepresentativeIndividual",
+        "answerOptions": [
+            {
+                "answerIDLvl2": "KidReceived",
+                "label": "According to the EU Directive on „key information documents for packaged retail and insurance-based investment products (PRIIPs)“ you have to be provided with a key information document (KID) about the fund. The KID serves to inform you on the potential risk and costs associated with an investment in the fund. You can find the KID in the Accompanying Documents). You have the right to request a paper copy of the KID free of charge. Please contact the Fund management, if you wish to request a paper copy of the KID. A copy of the KID is also available on our website, as further indicated in the digital KID form. (Deutsche Übersetzung / German translation)",
+                "entity": true,
+                "individual": true
+            }
+        ]
+    },
+    {
+        "answerIDLvl1": "MoreThan10MEntity",
+        "label": "MoreThan10MEntity",
+        "answerOptions": [
+            {
+                "answerIDLvl2": "KidReceived",
+                "label": "According to the EU Directive on „key information documents for packaged retail and insurance-based investment products (PRIIPs)“ you have to be provided with a key information document (KID) about the fund. The KID serves to inform you on the potential risk and costs associated with an investment in the fund. You can find the KID in the Accompanying Documents). You have the right to request a paper copy of the KID free of charge. Please contact the Fund management, if you wish to request a paper copy of the KID. A copy of the KID is also available on our website, as further indicated in the digital KID form. (Deutsche Übersetzung / German translation)",
+                "entity": true,
+                "individual": true
+            }
+        ]
+    },
+    {
+        "answerIDLvl1": "MoreThan10MIndividual",
+        "label": "MoreThan10MIndividual",
+        "answerOptions": [
+            {
+                "answerIDLvl2": "KidReceived",
+                "label": "According to the EU Directive on „key information documents for packaged retail and insurance-based investment products (PRIIPs)“ you have to be provided with a key information document (KID) about the fund. The KID serves to inform you on the potential risk and costs associated with an investment in the fund. You can find the KID in the Accompanying Documents). You have the right to request a paper copy of the KID free of charge. Please contact the Fund management, if you wish to request a paper copy of the KID. A copy of the KID is also available on our website, as further indicated in the digital KID form. (Deutsche Übersetzung / German translation)",
+                "entity": true,
+                "individual": true
+            }
+        ]
+    },
+    {
+        "answerIDLvl1": "OtherEntityInvestor",
+        "label": "OtherEntityInvestor",
+        "answerOptions": [
+            {
+                "answerIDLvl2": "KidReceived",
+                "label": "According to the EU Directive on „key information documents for packaged retail and insurance-based investment products (PRIIPs)“ you have to be provided with a key information document (KID) about the fund. The KID serves to inform you on the potential risk and costs associated with an investment in the fund. You can find the KID in the Accompanying Documents). You have the right to request a paper copy of the KID free of charge. Please contact the Fund management, if you wish to request a paper copy of the KID. A copy of the KID is also available on our website, as further indicated in the digital KID form. (Deutsche Übersetzung / German translation)",
+                "entity": true,
+                "individual": true
+            }
+        ]
+    },
+    {
+        "answerIDLvl1": "ProfessionalIndividual",
+        "label": "The Investor is a private equity or venture capital professional or a professional business angel.",
+        "answerOptions": [
+            {
+                "answerIDLvl2": "Morethan200k",
+                "label": "The Investor subscribes for a Capital Commitment of at least EUR 200,000.",
+                "entity": true
+            },
+            {
+                "answerIDLvl2": "ProfessionalInvestor",
+                "label": "The Investor meets (at least) two of the following requirements and wishes to be treated as a professional investor  in relation to its participation in the Fund (please tick as applicable):",
+                "entity": true,
+                "type": "checkbox",
+                "minAnswers": "2",
+                "optionsLvl3": [
+                    {
+                        "label": "The size of the Investor's financial instrument portfolio, defined as including cash deposits and financial instruments, exceeds EUR 500,000.",
+                        "value": "ans_ProfessionalInvestor_MoreThan500"
+                    },
+                    {
+                        "label": "The investor, or a person authorised to transact business in the Investor's name, has worked in the financial sector for at least one year in a professional position, which requires knowledge of the transactions or services envisaged.",
+                        "value": "ans_ProfessionalInvestor_AtLeast1Year"
+                    },
+                    {
+                        "label": "The Investor, or a person authorised to transact business in the Investor's name, has carried out transactions, in significant size, on the relevant market at an average frequency of 10 per quarter over the previous four quarters.",
+                        "value": "ans_ProfessionalInvestor_MoreThan10Quarterly"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "answerIDLvl1": "OtherIndividualInvestor",
+        "label": "The investor does not fit into one of the options above.",
+        "answerOptions": [
+            {
+                "answerIDLvl2": "ProfessionalInvestor",
+                "label": "The Investor meets (at least) two of the following requirements and wishes to be treated as a professional investor  in relation to its participation in the Fund (please tick as applicable):",
+                "individual": true,
+                "type": "checkbox",
+                "minAnswers": "2",
+                "optionsLvl3": [
+                    {
+                        "label": "The size of the Investor's financial instrument portfolio, defined as including cash deposits and financial instruments, exceeds EUR 500,000.",
+                        "value": "ans_ProfessionalInvestor_MoreThan500"
+                    },
+                    {
+                        "label": "The investor, or a person authorised to transact business in the Investor's name, has worked in the financial sector for at least one year in a professional position, which requires knowledge of the transactions or services envisaged.",
+                        "value": "ans_ProfessionalInvestor_AtLeast1Year"
+                    },
+                    {
+                        "label": "The Investor, or a person authorised to transact business in the Investor's name, has carried out transactions, in significant size, on the relevant market at an average frequency of 10 per quarter over the previous four quarters.",
+                        "value": "ans_ProfessionalInvestor_MoreThan10Quarterly"
+                    }
+                ]
+            },
+            {
+                "answerIDLvl2": "Morethan200k",
+                "label": "The Investor subscribes for a Capital Commitment of at least EUR 200,000.",
+                "individual": true
+            }
+        ]
+    },
+    {
+        "answerIDLvl1": "[\"ans_ProfessionalInvestor_MoreThan500\", \"ans_ProfessionalInvestor_AtLeast1Year\", \"ans_ProfessionalInvestor_MoreThan10Quarterly\"]",
+        "label": "The investor does not fit into one of the options above.",
+        "answerOptions": [
+            {
+                "answerIDLvl2": "Morethan200k",
+                "label": "The Investor subscribes for a Capital Commitment of at least EUR 200,000.",
+                "individual": true
+            },
+            {
+                "answerIDLvl2": "ProfessionalInvestor",
+                "label": "The Investor meets (at least) two of the following requirements and wishes to be treated as a professional investor  in relation to its participation in the Fund (please tick as applicable):",
+                "individual": true,
+                "type": "checkbox",
+                "minAnswers": "2",
+                "optionsLvl3": [
+                    {
+                        "label": "The size of the Investor's financial instrument portfolio, defined as including cash deposits and financial instruments, exceeds EUR 500,000.",
+                        "value": "ans_ProfessionalInvestor_MoreThan500"
+                    },
+                    {
+                        "label": "The investor, or a person authorised to transact business in the Investor's name, has worked in the financial sector for at least one year in a professional position, which requires knowledge of the transactions or services envisaged.",
+                        "value": "ans_ProfessionalInvestor_AtLeast1Year"
+                    },
+                    {
+                        "label": "The Investor, or a person authorised to transact business in the Investor's name, has carried out transactions, in significant size, on the relevant market at an average frequency of 10 per quarter over the previous four quarters.",
+                        "value": "ans_ProfessionalInvestor_MoreThan10Quarterly"
+                    }
+                ]
+            }
+        ]
+    }
+]
