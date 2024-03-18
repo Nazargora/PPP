@@ -8,6 +8,9 @@ def install_flows(changed_files):
     if changed_files:
         spec_files = [file for file in os.listdir("specs") if file.endswith(".json")]
         
+        # Adjust the path to consider only the file name
+        changed_files = [os.path.basename(file) for file in changed_files]
+        
         files_to_copy = [file for file in changed_files if file in spec_files]
         
         if not files_to_copy:
@@ -34,7 +37,8 @@ def create_flow_spec(files_to_copy):
 
 if __name__ == "__main__":
     arg_parser = argparse.ArgumentParser(description='Add arg change')
-    arg_parser.add_argument('-cf', '--changed_files', nargs='+', required=True, help='List of space-separated changed file names')
+    arg_parser.add_argument('--changed_files', nargs='+', required=True, help='List of space-separated changed file names')
     args = arg_parser.parse_args()
     changed_files = args.changed_files
     install_flows(changed_files)
+
