@@ -17,10 +17,8 @@ def install_flows(changed_files):
         
         spec_files = [file for file in os.listdir(specs_dir) if file.endswith(".json")]
         
-        # Split the changed_files string into separate file names
-        changed_files = changed_files.split()
-        
-        files_to_copy = [file for file in changed_files if file in spec_files]
+        # Extract only the file names from the full paths
+        files_to_copy = [os.path.basename(file) for file in changed_files if os.path.basename(file) in spec_files]
         
         if not files_to_copy:
             print("No matching files found in 'specs' directory. Skipping installation.")
@@ -53,8 +51,12 @@ if __name__ == "__main__":
     arg_parser = argparse.ArgumentParser(description='Add arg change')
     arg_parser.add_argument('--changed_files', nargs='+', required=True, help='List of space-separated changed file names')
     args = arg_parser.parse_args()
-    changed_files = " ".join(args.changed_files)
+    
+    # Split the changed_files string into separate file names
+    changed_files = [filename.split('/')[-1] for filename in args.changed_files]
+    
     install_flows(changed_files)
+
 
 
 
