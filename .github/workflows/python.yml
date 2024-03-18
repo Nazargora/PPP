@@ -4,9 +4,7 @@ on:
   push:
     paths:
       - '**.json'
-      
-      
-      
+
 jobs:
   move_files_job:
     runs-on: ubuntu-latest
@@ -29,4 +27,4 @@ jobs:
 
       - name: Execute Python script
         run: |
-          python3 pythonargs.py --changed_files ${{ steps.changed-files.outputs.all_changed_files }}
+          python3 $GITHUB_WORKSPACE/pythonargs.py --changed_files "${{ steps.changed-files.outputs.all_changed_files }}"
