@@ -2,9 +2,11 @@ name: Move Changed Files
 
 on:
   push:
-    branches:
-      - main  # Change this to your branch name if different
-
+    paths:
+      - '**.json'
+      
+      
+      
 jobs:
   move_files_job:
     runs-on: ubuntu-latest
