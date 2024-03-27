@@ -27,4 +27,5 @@ jobs:
 
       - name: Execute Python script
         run: |
-          python3 $GITHUB_WORKSPACE/pythonargs.py --changed_files ${{ steps.changed-files.outputs.all_changed_files }}
+         python3 new.py -e editor -c ${{secrets.user}}:${{secrets.pass}} -cf ${{ steps.changed-files.outputs.all_changed_files }} -f ${{ github.workspace }}
+
