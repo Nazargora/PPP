@@ -12,7 +12,7 @@ logger = logging.getLogger()
 arg_parser = argparse.ArgumentParser(description='Load JSON specs from git')
 arg_parser.add_argument('-e', '--env', required=True,  help='Target environment destination')
 arg_parser.add_argument('-c', '--credentials', required=True, help='Target env backend credential pair in format username:password')
-arg_parser.add_argument('-cf', '--changed_files', nargs='+', required=True, help='List of space-separated changed file names')
+arg_parser.add_argument('-cf', '--changed_files', nargs='+', required=False, help='List of space-separated changed file names')
 arg_parser.add_argument('-f', '--folder_path', required=True, help='Folder path of flow specs')
 
 
