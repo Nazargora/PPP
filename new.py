@@ -92,6 +92,10 @@ if __name__ == '__main__':
     env = args.env
     credentials = args.credentials
     folder_path = args.folder_path
+if args.changed_files:
     changed_files_list = [filename.split('/')[-1] for filename in args.changed_files]
+else:
+    print("No changed files provided. Skipping installation.")
+    changed_files_list = []
 
     install_flows(changed_files_list, folder_path)
