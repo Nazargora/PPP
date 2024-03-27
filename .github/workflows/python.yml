@@ -26,6 +26,5 @@ jobs:
           python-version: '3.12.2'  # Change to the Python version you are using
 
       - name: Execute Python script
-        run: |
-         python3 new.py -e editor -c ${{secrets.user}}:${{secrets.pass}} -cf ${{ steps.changed-files.outputs.all_changed_files }} -f ${{ github.workspace }}
+        run: python3 new.py -e editor -c ${{secrets.user}}:${{secrets.pass}} -cf ${{ steps.changed-files.outputs.all_changed_files }} -f ${{ github.workspace }}
 
