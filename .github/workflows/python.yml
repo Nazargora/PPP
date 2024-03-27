@@ -2,8 +2,7 @@ name: Move Changed Files
 
 on:
   push:
-    paths:
-      - '**.json'
+    
 
 jobs:
   move_files_job:
